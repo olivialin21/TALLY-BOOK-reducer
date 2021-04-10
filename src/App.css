@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+/* header */
+.header{
+  position:-webkit-sticky;
+  position:sticky;
+  top:-130px;
+  z-index:9999;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  display:block;
+  position:absolute;
+  left:106px;
+  top:-60px;
+  width: 260px;
+  z-index:-9;
+  transform:scale(1,1);
+  transition: all 0.3s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo:hover{
+  transform:scale(1.2,1.2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ripple */
+.header_ripple{
+  position:absolute;
+  width:100%;
+  height:130px;
+  background-color: #FFF;
+  z-index:-99;
+  transition: all 0.3s;
+}
+
+.HOVER {
+  --width: 100%;
+--time: 2s;
+  position: relative;
+  height: 100%;
+background: transparent;
+overflow: hidden;
+}
+
+.HOVER span {
+position: absolute;
+display: block;
+z-index: 0;
+width: 0;
+  height: 0;
+border-radius: 100%;
+background: #ffe4ef;
+transform: translate(-50%, -50%);
+transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+width: calc(var(--width) * 2.25);
+padding-top: calc(var(--width) * 2.25);
+}
+
+/* contatct */
+.contact{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  position: absolute;
+  top:60px;
+  right:120px;
+  z-index:999;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.contact_icon{
+  width: 30px;
+  height: 30px;
+  margin-left:15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact_icon:hover{
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  75% {
+    transform: translate3d(-6px, 0, 0);
   }
-  to {
-    transform: rotate(360deg);
+
+  25% {
+    transform: translate3d(6px, 0, 0);
   }
 }
