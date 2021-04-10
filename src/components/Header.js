@@ -16,8 +16,7 @@ export default function Header() {
       ELEMENTS_SPAN[index].style.left = e.pageX - element.offsetLeft + "px";
       ELEMENTS_SPAN[index].style.top = e.pageY - element.offsetTop + "px";
     });
-  });  
-  
+  });
   return(
     <header class="header">
       <a href="https://chao-chi.github.io/midterm/index.html">

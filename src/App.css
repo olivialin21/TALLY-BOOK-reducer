@@ -67,7 +67,7 @@ html{
   width: 0;
   height: 0;
   border-radius: 100%;
-  background: #ffe4ef;
+  background: #e3dfe6;
   transform: translate(-50%, -50%);
   transition: width var(--time), padding-top var(--time);
 }
@@ -116,7 +116,7 @@ html{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #FFE7AB;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -126,20 +126,22 @@ html{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #000;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  background-color: #ffdb65;
 }
 
-.sidenav .closebtn {
+.sidenav .closeBtn {
   position: absolute;
   top: 0;
   right: 25px;
-  font-size: 36px;
+  font-size:60px;
+  cursor:pointer;
+  color:#000;
   margin-left: 50px;
 }
 
@@ -148,18 +150,42 @@ html{
   .sidenav a {font-size: 18px;}
 }
 
-.closeBtn{
-  font-size:50px;
-  cursor:pointer;
-  color:#FFF;
-}
-
 .hamBtn{
-  display:inline;
   position: relative;
   margin-top:50px;
-  font-size:30px;
+  margin-left:10px;
+  font-size:40px;
   cursor:pointer;
+  width:40px;
+}
+
+/* info */
+.info{
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size:24px;
+}
+
+.info-ratio{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 400px;
+  border-radius: 20px;
+  background-color: #FFF;
+}
+
+.info-bal{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 200px;
+  border-radius: 20px;
+  margin-left:50px;
+  background-color: #FFF;
 }
 
 /* calendar */
@@ -168,4 +194,20 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.react-calendar {
+  width: 1000px !important;
+  border: 0 !important;
+  border-radius: 20px;
+  line-height: 3em !important;
+}
+
+/* footer */
+.footer{
+  width:100%;
+  position:absolute;
+  text-align: center;
+  bottom:0;
+  color:#726c68;
 }
