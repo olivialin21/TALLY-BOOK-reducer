@@ -8,8 +8,8 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <div className="container-fluid">
-      <Navbar/>
       <Header/>
+      <Navbar/>
       <Calendar/>
       <Footer/>
     </div>

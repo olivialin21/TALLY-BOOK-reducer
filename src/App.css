@@ -1,17 +1,36 @@
+/* global */
+html{
+  width:100%;
+  margin:0 auto;
+  background-color: #FFF4DE;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;  
+}
+
+.container-fluid{
+  display:flex;
+  flex-direction: column;
+  padding:0!important;
+}
+
 /* header */
 .header{
   position:-webkit-sticky;
   position:sticky;
-  top:-130px;
-  z-index:9999;
+  /* top:-130px; */
+  /* z-index:9999; */
 }
 
 .logo{
   display:block;
   position:absolute;
   left:106px;
-  top:-60px;
-  width: 260px;
+  /* top:-60px; */
+  width: 100px;
   z-index:-9;
   transform:scale(1,1);
   transition: all 0.3s ease-out;
@@ -25,7 +44,7 @@
 .header_ripple{
   position:absolute;
   width:100%;
-  height:130px;
+  height:50px;
   background-color: #FFF;
   z-index:-99;
   transition: all 0.3s;
@@ -33,28 +52,28 @@
 
 .HOVER {
   --width: 100%;
---time: 2s;
+  --time: 2s;
   position: relative;
   height: 100%;
-background: transparent;
-overflow: hidden;
+  background: transparent;
+  overflow: hidden;
 }
 
 .HOVER span {
-position: absolute;
-display: block;
-z-index: 0;
-width: 0;
+  position: absolute;
+  display: block;
+  z-index: 0;
+  width: 0;
   height: 0;
-border-radius: 100%;
-background: #ffe4ef;
-transform: translate(-50%, -50%);
-transition: width var(--time), padding-top var(--time);
+  border-radius: 100%;
+  background: #ffe4ef;
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
 }
 
 .HOVER:hover span {
-width: calc(var(--width) * 2.25);
-padding-top: calc(var(--width) * 2.25);
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
 }
 
 /* contatct */
@@ -86,4 +105,58 @@ padding-top: calc(var(--width) * 2.25);
   25% {
     transform: translate3d(6px, 0, 0);
   }
+}
+
+/* Navbar */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.closeBtn{
+  font-size:50px;
+  cursor:pointer;
+  color:#FFF;
+}
+
+.hamBtn{
+  display:inline;
+  position: relative;
+  margin-top:50px;
+  font-size:30px;
+  cursor:pointer;
 }

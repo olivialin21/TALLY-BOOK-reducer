@@ -4,7 +4,7 @@
 // import Footer from "../components/Footer";
 // import { StoreContext } from "../store";
 
-function Setting() {
+function Input() {
   return (
     <div className="container">
       {/* <Navbar />
@@ -14,4 +14,4 @@ function Setting() {
   );
 }
 
-export default Setting;
+export default Input;
