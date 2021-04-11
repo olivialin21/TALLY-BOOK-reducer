@@ -10,6 +10,10 @@ export default function CalendarObj() {
       <Calendar
         onChange={onChange}
         value={value}
+        onClickDay={value => {
+          window.location.href="/input";
+          console.log(value);
+        }}
       />
     </div>
   );
