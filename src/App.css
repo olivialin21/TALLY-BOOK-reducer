@@ -1,3 +1,7 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
 /* global */
 html{
   width:100%;
@@ -163,6 +167,7 @@ html{
   color:#8089d3
 }
 
+/* HOME */
 /* info */
 .info{
   display: flex;
@@ -209,19 +214,38 @@ html{
 
 /* INPUT */
 /* class */
+.classes{
+}
+
 .classBtn-b{
   height: 70px;
   width: 70px;
+}
+
+.classItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  width: 112px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size:60px;
+  color:#FFF;
+  background-color: #FFCEC3;
+  border-radius: 50%;
+  border: #FFF 10px solid;
 }
 
 /* record */
 .record{
   height:700px;
   width: 500px;
+  border-radius: 20px;
   background-color: #fff;
 }
 
-/* FOOTER */
+/* footer */
 .footer{
   width:100%;
   position:absolute;
