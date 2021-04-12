@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import imgHome from '../images/icn_home.svg'
 
 export default function InputForm() {
@@ -10,7 +11,9 @@ export default function InputForm() {
       </form>
       <div className="inputForm-home">
         <img scr={imgHome} alt="imgHome" className="inputForm-imgHome"/>
-        Home
+        <NavLink to="/" className="nav-item">
+          Home
+        </NavLink>
       </div>
     </div>
   );

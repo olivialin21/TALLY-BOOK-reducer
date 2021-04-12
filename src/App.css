@@ -19,7 +19,7 @@ html{
   flex-direction: column;
   padding:0!important;
   background-color: #FFF4DE;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* header */
@@ -284,6 +284,7 @@ html{
 .inputForm-home{
   display: flex;
   justify-content: center;
+  text-decoration: none;
 }
 
 .inputForm-home{
@@ -294,9 +295,10 @@ html{
 
 /* footer */
 .footer{
+  bottom:20px;
+  height: 20px;
   width:100%;
   position:absolute;
   text-align: center;
-  bottom:0;
   color:#726c68;
 }

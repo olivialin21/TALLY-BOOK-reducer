@@ -5,7 +5,7 @@ export default function Statistics() {
         收支比：
       </div>
       <div className="info-bal pl-4">
-        平均：
+        本月：
       </div>
     </div>
   );

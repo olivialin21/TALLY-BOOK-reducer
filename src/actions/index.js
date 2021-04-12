@@ -1,9 +1,9 @@
 import { createContext } from "react";
 import useReducerWithThunk from "use-reducer-thunk";
-// import products from "../json/products.json";
 import {
   ADD_RECORD,
-  REMOVE_RECORD
+  REMOVE_RECORD,
+  EDIT_RECORD
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -40,8 +40,8 @@ function reducer(state, action) {
     //       activeItem: action.payload,
     //     },
     //   };
-    case ADD_CART_ITEM:
-      const item = action.payload;
+    // case ADD_CART_ITEM:
+    //   const item = action.payload;
       // const product = state.cartItems.find((x) => x.id === item.id);
       // if (product) {
       //   cartItems = state.cartItems.map((x) =>
@@ -49,11 +49,11 @@ function reducer(state, action) {
       //   );
       //   return { ...state, cartItems };
       // }
-      cartItems = [...state.cartItems, item];
-      return { ...state, cartItems };
-    case REMOVE_CART_ITEM:
-      cartItems = state.cartItems.filter((x) => x.id !== action.payload);
-      return { ...state, cartItems };
+      // cartItems = [...state.cartItems, item];
+      // return { ...state, cartItems };
+    // case REMOVE_CART_ITEM:
+    //   cartItems = state.cartItems.filter((x) => x.id !== action.payload);
+    //   return { ...state, cartItems };
     // case SET_PRODUCT_DETAIL:
     //   return { ...state, productDetail: action.payload };
     // default:
