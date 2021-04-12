@@ -14,7 +14,7 @@ function Setting() {
       <Navbar/>
       <div className="container">
         <Class/>
-        <div className="row">
+        <div className="row mt-4">
           <Record/>
           <InputForm/>
         </div>

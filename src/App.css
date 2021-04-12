@@ -71,7 +71,7 @@ html{
   width: 0;
   height: 0;
   border-radius: 100%;
-  background: #e3dfe6;
+  background: #ffe9e4;
   transform: translate(-50%, -50%);
   transition: width var(--time), padding-top var(--time);
 }
@@ -164,7 +164,7 @@ html{
 }
 
 .hamBtn:hover{
-  color:#8089d3
+  color:#8089d3;
 }
 
 /* HOME */
@@ -237,12 +237,59 @@ html{
   border: #FFF 10px solid;
 }
 
+.classItem-in{
+  background-color: #d8806d;
+}
+
 /* record */
 .record{
-  height:700px;
-  width: 500px;
+  height:500px;
   border-radius: 20px;
   background-color: #fff;
+}
+
+/* inputForm */
+.inputForm{
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.inputForm input{
+  padding-left: 20px;
+  height: 80px;
+  border: 0;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-family: 'Righteous', cursive;
+  color: #000;
+}
+
+.inputForm-ok{
+  background-color: #DDD7EE;
+  color:#FFF !important;
+  font-size: 24px;
+}
+
+::placeholder {
+  color: #00000041;
+}
+
+.inputForm-imgHome{
+  width: 30px;
+  height: 30px;
+}
+
+.inputForm-home{
+  display: flex;
+  justify-content: center;
+}
+
+.inputForm-home{
+  font-size: 24px;
+  font-family: 'Righteous', cursive;
+  color: #000;
 }
 
 /* footer */

@@ -23,23 +23,23 @@ export default function Header() {
     });
   });
   return(
-    <header class="header">
+    <header className="header">
       <a href="https://chao-chi.github.io/midterm/index.html">
-          <img class="logo" src={imgLogo} alt="GEGEU3U"/>
+          <img className="logo" src={imgLogo} alt="GEGEU3U"/>
       </a>
-      <div class="contact">
+      <div className="contact">
           <a href="https://www.instagram.com/define_twoowl_3g/?hl=zh-tw" target="_blank">
-              <img class="contact_icon" src={imgIcnIg} alt="ig"/>
+              <img className="contact_icon" src={imgIcnIg} alt="ig"/>
           </a>
           <a href="https://www.facebook.com/groups/568827753582047" target="_blank">
-              <img class="contact_icon" src={imgIcnFb} alt="fb"/>
+              <img className="contact_icon" src={imgIcnFb} alt="fb"/>
           </a>
           <a href="https://www.youtube.com/channel/UCmej5oymLBhl8X3TGrd7JKg/" target="_blank">
-              <img class="contact_icon" src={imgIcnYt} alt="yt"/>
+              <img className="contact_icon" src={imgIcnYt} alt="yt"/>
           </a>
       </div>
-      <div class="header_ripple">
-          <div class="HOVER">
+      <div className="header_ripple">
+          <div className="HOVER">
               <span></span>
           </div>
       </div>
