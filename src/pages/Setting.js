@@ -1,17 +1,17 @@
 // import { useContext } from "react";
-// import Navbar from "../components/Navbar";
-// import Header from "../components/Header";
-// import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 // import { StoreContext } from "../store";
 
-function Input() {
+function Setting() {
   return (
-    <div className="container">
-      {/* <Navbar />
+    <div className="container-fluid">
+      <Navbar />
       <Header/>
-      <Footer/> */}
+      <Footer/>
     </div>
   );
 }
 
-export default Input;
+export default Setting;

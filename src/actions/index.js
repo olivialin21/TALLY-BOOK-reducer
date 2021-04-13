@@ -7,9 +7,9 @@ import {
 } from "../utils/constants";
 
 export const StoreContext = createContext();
-// let cartItems = localStorage.getItem("cartItems")
-//   ? JSON.parse(localStorage.getItem("cartItems"))
-//   : [];
+let cartItems = localStorage.getItem("cartItems")
+  ? JSON.parse(localStorage.getItem("cartItems"))
+  : [];
 
 const initialState = {
   // page: {

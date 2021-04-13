@@ -28,13 +28,13 @@ export default function Header() {
           <img className="logo" src={imgLogo} alt="GEGEU3U"/>
       </a>
       <div className="contact">
-          <a href="https://www.instagram.com/define_twoowl_3g/?hl=zh-tw" target="_blank">
+          <a href="https://www.instagram.com/define_twoowl_3g/?hl=zh-tw" target="_blank" rel="noreferrer">
               <img className="contact_icon" src={imgIcnIg} alt="ig"/>
           </a>
-          <a href="https://www.facebook.com/groups/568827753582047" target="_blank">
+          <a href="https://www.facebook.com/groups/568827753582047" target="_blank" rel="noreferrer">
               <img className="contact_icon" src={imgIcnFb} alt="fb"/>
           </a>
-          <a href="https://www.youtube.com/channel/UCmej5oymLBhl8X3TGrd7JKg/" target="_blank">
+          <a href="https://www.youtube.com/channel/UCmej5oymLBhl8X3TGrd7JKg/" target="_blank" rel="noreferrer">
               <img className="contact_icon" src={imgIcnYt} alt="yt"/>
           </a>
       </div>

@@ -124,6 +124,7 @@ html{
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  z-index: 99;
 }
 
 .sidenav a {
@@ -141,12 +142,16 @@ html{
 
 .sidenav .closeBtn {
   position: absolute;
-  top: 0;
-  right: 25px;
-  font-size:60px;
+  top: -10px;
+  right: 20px;
+  font-size:50px;
   cursor:pointer;
   color:#000;
   margin-left: 50px;
+}
+
+.closeBtn:hover {
+  color:#8089d3;
 }
 
 @media screen and (max-height: 450px) {
@@ -155,12 +160,14 @@ html{
 }
 
 .hamBtn{
-  position: relative;
-  margin-top:50px;
-  margin-left:10px;
+  position: fixed;
+  top:4px;
+  left:10px;
+  line-height: 40px;
   font-size:40px;
   cursor:pointer;
   width:40px;
+  z-index: 9;
 }
 
 .hamBtn:hover{
@@ -170,6 +177,8 @@ html{
 /* HOME */
 /* info */
 .info{
+  position:relative;
+  margin-top:100px;
   display: flex;
   height: 150px;
   justify-content: center;
@@ -215,6 +224,8 @@ html{
 /* INPUT */
 /* class */
 .classes{
+  position:relative;
+  margin-top:100px;
 }
 
 .classBtn-b{
@@ -252,10 +263,11 @@ html{
 .inputForm{
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
 }
 
 .inputForm input{
+  margin-left: 30px;
+  margin-right: 30px;
   padding-left: 20px;
   height: 80px;
   border: 0;
@@ -295,10 +307,10 @@ html{
 
 /* footer */
 .footer{
-  bottom:20px;
-  height: 20px;
+  margin:20px 0;
+  height:20px;
   width:100%;
-  position:absolute;
+  position:relatives;
   text-align: center;
   color:#726c68;
 }

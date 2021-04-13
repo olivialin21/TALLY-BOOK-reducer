@@ -7,7 +7,7 @@ import Record from "../components/Record";
 import InputForm from "../components/InputForm";
 // import { StoreContext } from "../store";
 
-function Setting() {
+function Input() {
   return (
     <div className="container-fluid">
       <Header/>
@@ -24,4 +24,4 @@ function Setting() {
   );
 }
 
-export default Setting;
+export default Input;
