@@ -2,6 +2,7 @@ import imgLogo from '../images/logo.png'
 import imgIcnIg from '../images/icn_ig.png'
 import imgIcnFb from '../images/icn_fb.png'
 import imgIcnYt from '../images/icn_yt.png'
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   const ELEMENTS = document.querySelectorAll(".HOVER");
@@ -24,9 +25,9 @@ export default function Header() {
   });
   return(
     <header className="header">
-      <a href="https://chao-chi.github.io/midterm/index.html">
-          <img className="logo" src={imgLogo} alt="GEGEU3U"/>
-      </a>
+      <NavLink to="/">
+        <img className="logo" src={imgLogo} alt="GEGEU3U"/>
+      </NavLink>
       <div className="contact">
           <a href="https://www.instagram.com/define_twoowl_3g/?hl=zh-tw" target="_blank" rel="noreferrer">
               <img className="contact_icon" src={imgIcnIg} alt="ig"/>

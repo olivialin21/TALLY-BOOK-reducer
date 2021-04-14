@@ -1,25 +1,26 @@
-// import { createContext } from "react";
-// import useReducerWithThunk from "use-reducer-thunk";
-// import {
-//   ADD_RECORD,
-//   REMOVE_RECORD,
-//   EDIT_RECORD
-// } from "../utils/constants";
+import { createContext } from "react";
+import useReducerWithThunk from "use-reducer-thunk";
+import {
+  // ADD_RECORD,
+  // REMOVE_RECORD,
+  // EDIT_RECORD,
+  SET_DATE,
+} from "../utils";
 
-// export const StoreContext = createContext();
+export const StoreContext = createContext();
 
-// const initialState = {
-//   temp_date: "",
-//   info: [],
-// };
+const initialState = {
+  temp_date: "哭阿",
+  info: [],
+};
 
-// function reducer(state, action) {
-//   switch (action.type) {
-//     case ADD_RECORD:
-//       return {
-//         ...state,
-//         page: action.payload,
-//       };
+function reducer(state, action) {
+  switch (action.type) {
+    case SET_DATE:
+      return {
+        ...state,
+        temp_date: action.payload,
+      };
 //     case SET_NAVBAR_ACTIVEITEM:
 //       return {
 //         ...state,
@@ -43,22 +44,21 @@
 //       return { ...state, cartItems };
 //     case SET_PRODUCT_DETAIL:
 //       return { ...state, productDetail: action.payload };
-//     default:
-//       return state;
-//   }
-// }
+    default:
+      return state;
+  }
+}
 
-// export function StoreProvider(props) {
-//   const [state, dispatch] = useReducerWithThunk(
-//     reducer,
-//     initialState,
-//     "example"
-//   );
-//   const value = { state, dispatch };
+export function StoreProvider(props) {
+  const [state, dispatch] = useReducerWithThunk(
+    reducer,
+    initialState
+  );
+  const value = { state, dispatch };
 
-//   return (
-//     <StoreContext.Provider value={value}>
-//       {props.children}
-//     </StoreContext.Provider>
-//   );
-// }
+  return (
+    <StoreContext.Provider value={value}>
+      {props.children}
+    </StoreContext.Provider>
+  );
+}

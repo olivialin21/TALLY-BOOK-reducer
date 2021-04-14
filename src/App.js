@@ -5,10 +5,11 @@ import Home from './pages/Home';
 import Input from './pages/Input';
 import Feedback from './pages/Feedback';
 import Setting from './pages/Setting';
+import { StoreProvider } from "./store";
 
 function App() {
   return (
-    // <StoreProvider>
+    <StoreProvider>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -17,7 +18,7 @@ function App() {
           <Route path="/settinig" component={Setting} />
         </Switch>
       </BrowserRouter>
-    // </StoreProvider>
+    </StoreProvider>
   );
 }
 

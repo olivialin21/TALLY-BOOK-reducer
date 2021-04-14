@@ -36,7 +36,6 @@ html{
   left:106px;
   top:-25px;
   width: 100px;
-  z-index:-9;
   transform:scale(1,1);
   transition: all 0.3s ease-out;
 }
@@ -222,12 +221,16 @@ html{
 }
 
 /* INPUT */
-/* class */
-.classes{
-  position:relative;
+.input-section{
   margin-top:100px;
 }
 
+/* date */
+.date{
+  font-size: 80px;
+}
+
+/* class */
 .classBtn-b{
   height: 70px;
   width: 70px;
@@ -274,7 +277,7 @@ html{
   border-radius: 20px;
   margin-bottom: 2rem;
   font-size: 24px;
-  font-family: 'Righteous', cursive;
+  font-family: 'Righteous', 'Roboto';
   color: #000;
 }
 

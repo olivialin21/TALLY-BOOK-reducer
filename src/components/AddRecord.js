@@ -5,14 +5,16 @@ import { StoreContext } from "../store"
 export default function AddRecord() {
   // const { state: { cartItems, productDetail: { product, qty } }, dispatch } = useContext(StoreContext);
 
-  const addRecord = () => {
+  const addRecord = (e) => {
+    e.preventDefault();
 
     const formElement = document.getElementById("form");
     const ps = formElement[0].value;
     const cost = formElement[1].value;
     console.log(ps);
     console.log(cost);
-    // addRecord(dispatch, product, qty);
+    // addRecord(dispatch, ps, cost);
+    document.getElementById("form").reset();
   };
 
   // useEffect(()=>{
@@ -21,9 +23,5 @@ export default function AddRecord() {
 
   return (
     <input className="inputForm-ok" type="submit" value="OK !" onClick={addRecord}/>
-    // <Button type="primary" className="btn-tocar" onClick={addToCart}>
-    //   <CartIcon size={20} />
-    //   <span style={{ marginLeft: 12 }}>Add To Shopping Bag</span>
-    // </Button>
   );
 }
