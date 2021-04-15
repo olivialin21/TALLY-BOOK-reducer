@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/input" component={Input} />
           <Route path="/feedback" component={Feedback} />
-          <Route path="/settinig" component={Setting} />
+          <Route path="/setting" component={Setting} />
         </Switch>
       </BrowserRouter>
     </StoreProvider>

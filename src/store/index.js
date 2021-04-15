@@ -8,18 +8,25 @@ import {
 } from "../utils";
 
 export const StoreContext = createContext();
+let date = localStorage.getItem("date")
+  ? localStorage.getItem("date")
+  : " ";
 
 const initialState = {
-  temp_date: "哭阿",
+  date: new Date(),
   info: [],
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case SET_DATE:
+      date = {
+        ...state,
+        date: action.payload,
+      };
       return {
         ...state,
-        temp_date: action.payload,
+        date: action.payload,
       };
 //     case SET_NAVBAR_ACTIVEITEM:
 //       return {

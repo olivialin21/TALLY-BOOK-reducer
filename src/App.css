@@ -227,7 +227,8 @@ html{
 
 /* date */
 .date{
-  font-size: 80px;
+  text-align: center;
+  font-size: 24px;
 }
 
 /* class */
