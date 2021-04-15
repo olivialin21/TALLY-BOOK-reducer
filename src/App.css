@@ -250,10 +250,19 @@ html{
   background-color: #FFCEC3;
   border-radius: 50%;
   border: #FFF 10px solid;
+  transition: all 0.3s;
 }
 
 .classItem-in{
   background-color: #d8806d;
+}
+
+.classItem:hover{
+  /* background-color: #d1c8e7; */
+  margin:8px 8px;
+  width: 96px;
+  height: 96px;
+  font-size: 45px;
 }
 
 /* record */

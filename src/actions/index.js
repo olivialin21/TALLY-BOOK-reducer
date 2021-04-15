@@ -2,7 +2,9 @@ import {
   // ADD_RECORD,
   // REMOVE_RECORD,
   // EDIT_RECORD,
-  SET_DATE
+  SET_DATE,
+  ADD_CLASS,
+  ADD_RECORD
 } from "../utils";
 
 // export const addCartItem = (dispatch, product, qty) => {
@@ -44,17 +46,23 @@ import {
 //     }
 //   })
 // }
+export const addRecord = (dispatch, date, aClass, ps, cost) => {
+  dispatch({
+    type: ADD_RECORD,
+    payload: [date, aClass, ps ,cost]
+  });
+};
 
-// export const pageContentsSet = (dispatch, title, products) => {
-//   dispatch({
-//     type: SET_PAGE_CONTENT,
-//     payload: { title, products },
-//   });
-// };
+export const addClass = (dispatch, aClass) => {
+  dispatch({
+    type: ADD_CLASS,
+    payload: aClass
+  });
+};
 
 export const setDate = (dispatch, date) => {
   dispatch({
     type: SET_DATE,
-    payload: date,
+    payload: date
   });
 };
