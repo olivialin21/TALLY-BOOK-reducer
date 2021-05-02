@@ -305,7 +305,7 @@ html{
   display: flex;
   align-items: center;
   height: 100px;
-  width: 200px;
+  min-width: 200px;
   border-radius: 20px;
   margin-left:50px;
   background-color: #FFF;

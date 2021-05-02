@@ -1,5 +1,5 @@
 import { useEffect, useContext } from "react";
-import { calSumDay } from '../functions';
+import { CalSumDay } from '../functions';
 import { StoreContext } from "../store"
 import { removeRecord } from "../actions";
 
@@ -22,21 +22,26 @@ export default function Record() {
             </tr>
           </thead>
           <tbody>
-            {record.map(info =>
-              <tr>
-                <td>{info.ps}</td>
-                { (info.aClass==="in") ? <td className="record-table-r">{info[3]}</td> :
-                  <td className="record-table-r">-{info.cost}</td>
-                }
-                <td className="record-x" onClick={() => removeRecord(dispatch, info)}>
-                  x
-                </td>
-              </tr>
-            )}
+            {record.map(info =>{
+              if (info.date===localStorage.getItem("date")){
+                return(
+                <tr>
+                  <td>{info.ps}</td>
+                  { (info.aClass==="in") ? <td className="record-table-r">{info.cost}</td> :
+                    <td className="record-table-r">-{info.cost}</td>
+                  }
+                  <td className="record-x" onClick={() => removeRecord(dispatch, info)}>
+                    x
+                  </td>
+                  <td></td>
+                </tr>
+                )
+              }
+            })}
           </tbody>
           <tfoot>
             <td>Total</td>
-            {/* <td className="record-table-r">{calSumDay(info)[0]-calSumDay(info)[1]}</td> */}
+            <td className="record-table-r">{CalSumDay()[0]-CalSumDay()[1]}</td>
             <td></td>
           </tfoot>
         </table>

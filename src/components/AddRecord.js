@@ -20,6 +20,8 @@ export default function AddRecord() {
       (new Audio(sound)).play();
       addRecord(dispatch, date, aClass, ps, cost);
       document.getElementById("form").reset();
+      document.getElementById(localStorage.getItem("class")).classList.remove("classItem--active");
+      localStorage.setItem("class","");
     } else {
       alert("您還沒有選擇類別或填滿表格喔！");
     }
