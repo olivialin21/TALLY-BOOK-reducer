@@ -1,61 +1,42 @@
 import { createContext } from "react";
 import useReducerWithThunk from "use-reducer-thunk";
 import {
-  ADD_RECORD,
-  // REMOVE_RECORD,
-  // EDIT_RECORD,
   SET_DATE,
-  ADD_CLASS
+  CHOOSE_CLASS,
+  ADD_RECORD,
+  REMOVE_RECORD
 } from "../utils";
 
 export const StoreContext = createContext();
-// let date = localStorage.getItem("date")
-//   ? localStorage.getItem("date")
-//   : " ";
+let record = localStorage.getItem("record")
+  ? JSON.parse(localStorage.getItem("record"))
+  : [];
 
 const initialState = {
   date: new Date(),
   aClass: "",
-  info: [],
+  record
 };
 
 function reducer(state, action) {
   switch (action.type) {
     case SET_DATE:
-      // date = {
-      //   ...state,
-      //   date: action.payload,
-      // };
       return {
         ...state,
         date: action.payload,
       };
-    case ADD_CLASS:
+    case CHOOSE_CLASS:
       return {
         ...state,
         aClass: action.payload,
       };
     case ADD_RECORD:
-      return {
-        ...state,
-        info: action.payload,
-      };
-//     case ADD_CART_ITEM:
-//       const item = action.payload;
-//       const product = state.cartItems.find((x) => x.id === item.id);
-//       if (product) {
-//         cartItems = state.cartItems.map((x) =>
-//           x.id === product.id ? item : x
-//         );
-//         return { ...state, cartItems };
-//       }
-//       cartItems = [...state.cartItems, item];
-//       return { ...state, cartItems };
-//     case REMOVE_CART_ITEM:
-//       cartItems = state.cartItems.filter((x) => x.id !== action.payload);
-//       return { ...state, cartItems };
-//     case SET_PRODUCT_DETAIL:
-//       return { ...state, productDetail: action.payload };
+      const info = action.payload;
+      record = [...state.record, info];
+      return { ...state, record };
+    case REMOVE_RECORD:
+      record = state.record.filter((x) => x !== action.payload);
+      return { ...state, record };
     default:
       return state;
   }
@@ -64,7 +45,8 @@ function reducer(state, action) {
 export function StoreProvider(props) {
   const [state, dispatch] = useReducerWithThunk(
     reducer,
-    initialState
+    initialState,
+    "example"
   );
   const value = { state, dispatch };
 

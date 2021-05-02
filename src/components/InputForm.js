@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import AddRecord from "../components/AddRecord"
-import imgHome from '../images/icn_home.svg'
+import ImgHome from '../images/home.svg'
 
 export default function InputForm() {
   return(
@@ -11,8 +11,8 @@ export default function InputForm() {
         <AddRecord/>
       </form>
       <div className="inputForm-home">
-        <img scr={imgHome} alt="imgHome" className="inputForm-imgHome"/>
-        <NavLink to="/" className="nav-item">
+        <img src={ImgHome} alt="imgHome"/>
+        <NavLink to="/">
           Home
         </NavLink>
       </div>

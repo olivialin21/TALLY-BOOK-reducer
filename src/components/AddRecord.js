@@ -1,27 +1,31 @@
-import { useEffect, useContext } from "react";
-import { StoreContext } from "../store"
-// import { addCartItem } from "../actions";
+import { useContext, useEffect } from 'react';
+import { StoreContext } from "../store";
+import { addRecord } from "../actions";
+import sound from "../audios/coin.mp3";
 
 export default function AddRecord() {
-  const { state: { date, aClass } , dispatch } = useContext(StoreContext);
+  const { state: { record , aClass }, dispatch } = useContext(StoreContext);
+  useEffect(()=>{
+    localStorage.setItem("record", JSON.stringify(record));
+  }, [record])
+
+  const date = localStorage.getItem("date") ? localStorage.getItem("date") : new Date();
   
-  const addRecord = (e) => {
-    e.preventDefault();
+  const submitRecord = () => {
     const formElement = document.getElementById("form");
     const ps = formElement[0].value;
     const cost = formElement[1].value;
-    console.log(ps);
-    console.log(cost);
-    // addRecord(dispatch, date, aClass, ps, cost);
-    document.getElementById("form").reset();
-    localStorage.setItem("info",[date, aClass, ps, cost])
+
+    if (aClass !== "" && ps !== "" && cost !== ""){
+      (new Audio(sound)).play();
+      addRecord(dispatch, date, aClass, ps, cost);
+      document.getElementById("form").reset();
+    } else {
+      alert("您還沒有選擇類別或填滿表格喔！");
+    }
   };
 
-  // useEffect(()=>{
-  //   localStorage.setItem("info",[date, aClass, ps, cost]);
-  // }, [])
-
   return (
-    <input className="inputForm-ok" type="submit" value="OK !" onClick={addRecord}/>
+    <input className="animate__animated animate__bounce inputForm-ok" type="button" value="OK !" onClick={submitRecord}/>
   );
 }

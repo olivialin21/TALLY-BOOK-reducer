@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useState, useContext } from 'react';
+import { useHistory } from "react-router-dom";
 import { StoreContext } from "../store"
 import { setDate } from "../actions";
 import Calendar from 'react-calendar';
@@ -8,9 +9,11 @@ export default function CalendarObj() {
   const [ value, onChange] = useState(new Date());
   const { dispatch } = useContext(StoreContext);
 
-  useEffect(()=>{
-    localStorage.setItem("date", value);
-  }, [value])
+  const history = useHistory();
+  const routeChange = () =>{ 
+    let path = `/input`; 
+    history.push(path);
+  }
 
   return (
     <div className="calendar">
@@ -18,10 +21,11 @@ export default function CalendarObj() {
         onChange={onChange}
         value={value}
         onClickDay={value => {
-          window.location.href="/input";
-          console.log(value);
           setDate(dispatch, value);
+          localStorage.setItem("date", value);
+          routeChange();
         }}
+        to="/input"
       />
     </div>
   );
