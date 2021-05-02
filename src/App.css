@@ -511,6 +511,7 @@ abbr[title], abbr[data-original-title]{
 }
 
 .record-table-r{
+  padding-top: 0;
   padding-left: 15px;
   border-left: #CCC3B1 5px solid;
 }

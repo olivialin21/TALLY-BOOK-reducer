@@ -16,7 +16,7 @@ export default function AddRecord() {
     const ps = formElement[0].value;
     const cost = formElement[1].value;
 
-    if (aClass !== "" && ps !== "" && cost !== ""){
+    if (localStorage.getItem("class") !== "" && ps !== "" && cost !== ""){
       (new Audio(sound)).play();
       addRecord(dispatch, date, aClass, ps, cost);
       document.getElementById("form").reset();
