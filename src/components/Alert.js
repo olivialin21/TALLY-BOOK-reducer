@@ -15,11 +15,11 @@ export default function Alert() {
     <div id="alert" className="alert display-none">
       <div id="alert-w" className="alert-w display-none">
         <div onClick={alertW} className="alert-x">x</div>
-        <img src={ImgAlertW}/>
+        <img src={ImgAlertW} alt="ImgAlertW"/>
       </div>
       <div id="alert-c" className="alert-w display-none">
         <div onClick={alertC} className="alert-x alert-c-x">x</div>
-        <img src={ImgAlertC}/>
+        <img src={ImgAlertC} alt="ImgAlertW"/>
       </div>
     </div>
   );
